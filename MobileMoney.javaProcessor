@@ -29,12 +29,3 @@ class MobileMoneyProcessor extends PaymentProcessor {
     }
 }
 
-
-
-System.out.println("\n=== MOBILE MONEY PAYMENT ===");
-
-PaymentProcessor payment = new MobileMoneyProcessor();
-
-payment.processPayment(50000);
-
-payment.processPayment(50000, "MOMO10");
