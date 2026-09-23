@@ -1,25 +1,10 @@
-class PaymentProcessor {
-
-    public void processPayment(double amount) {
-        System.out.println("Processing a general payment.");
-    }
-
-    public void processPayment(double amount, String couponCode) {
-        System.out.println("Processing payment with coupon: " + couponCode);
-    }
-}
-
 class MobileMoneyProcessor extends PaymentProcessor {
-
-    @Override
     public void processPayment(double amount) {
         System.out.printf(
             "Mobile Money: Payment of UGX %.2f successful.%n",
             amount
         );
     }
-
-    @Override
     public void processPayment(double amount, String couponCode) {
 
         double discount = amount * 0.10;
@@ -34,19 +19,5 @@ class MobileMoneyProcessor extends PaymentProcessor {
         System.out.printf("Final Amount: UGX %.2f%n", finalAmount);
 
         System.out.println("Mobile Money payment processed.");
-    }
-}
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        PaymentProcessor payment = new MobileMoneyProcessor();
-
-        System.out.println("=== PAYMENT WITHOUT COUPON ===");
-        payment.processPayment(50000);
-
-        System.out.println("\n=== PAYMENT WITH COUPON ===");
-        payment.processPayment(50000, "MOMO10");
     }
 }
