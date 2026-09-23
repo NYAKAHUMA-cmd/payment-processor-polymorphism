@@ -28,4 +28,3 @@ class MobileMoneyProcessor extends PaymentProcessor {
         System.out.println("Mobile Money payment processed.");
     }
 }
-
