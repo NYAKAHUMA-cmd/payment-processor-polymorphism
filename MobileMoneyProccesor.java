@@ -1,1 +1,23 @@
+class MobileMoneyProcessor extends PaymentProcessor {
+    public void processPayment(double amount) {
+        System.out.printf(
+            "Mobile Money: Payment of UGX %.2f successful.%n",
+            amount
+        );
+    }
+    public void processPayment(double amount, String couponCode) {
 
+        double discount = amount * 0.10;
+        double finalAmount = amount - discount;
+
+        System.out.println("Payment Method: Mobile Money");
+        System.out.println("Provider: MTN/Airtel Money");
+        System.out.println("Coupon Code: " + couponCode);
+
+        System.out.printf("Original Amount: UGX %.2f%n", amount);
+        System.out.printf("Discount: UGX %.2f%n", discount);
+        System.out.printf("Final Amount: UGX %.2f%n", finalAmount);
+
+        System.out.println("Mobile Money payment processed.");
+    }
+}
