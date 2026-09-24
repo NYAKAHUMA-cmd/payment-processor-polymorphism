@@ -1,12 +1,14 @@
-class MobileMoneyProcessor extends PaymentProcessor {
+public class MobileMoneyProcessor extends PaymentProcessor {
+    @Override
     public void processPayment(double amount) {
         System.out.printf(
             "Mobile Money: Payment of UGX %.2f successful.%n",
             amount
         );
     }
-    public void processPayment(double amount, String couponCode) {
 
+    @Override
+    public void processPayment(double amount, String couponCode) {
         double discount = amount * 0.10;
         double finalAmount = amount - discount;
 

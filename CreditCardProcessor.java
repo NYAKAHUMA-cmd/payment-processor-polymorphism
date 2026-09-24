@@ -6,7 +6,7 @@ public class CreditCardProcessor extends PaymentProcessor {
         System.out.println("Credit Card: Processing payment of $" + amount + " via Credit Card.");
     }
 
-    // Overloaded method (compile-time polymorphism)
+    @Override
     public void processPayment(double amount, String couponCode) {
         double discount = amount * 0.10; // 10% off for Credit Card promo
         double finalAmount = amount - discount;

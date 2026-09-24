@@ -20,7 +20,8 @@ public class Main {
             System.out.println("--------------------------------------------------");
         }
 
-        System.out.println("\n--- 2. Processing Promotional Payments (Compile-Time Polymorphism) ---");
+        // The two-argument overload is selected at compile time and dispatched dynamically.
+        System.out.println("\n--- 2. Processing Promotional Payments (Overload + Runtime Dispatch) ---");
         String promoCode = "SAVE10";
 
         for (PaymentProcessor processor : checkoutQueue) {

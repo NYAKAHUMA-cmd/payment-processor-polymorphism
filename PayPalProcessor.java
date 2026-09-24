@@ -6,7 +6,7 @@ public class PayPalProcessor extends PaymentProcessor {
         System.out.println("PayPal: Sending $" + amount + " via PayPal account.");
     }
     
-    // Overloaded method (compile-time polymorphism)
+    @Override
     public void processPayment(double amount, String couponCode) {
         double discount = amount * 0.15; // 15% off
         double finalAmount = amount - discount;
