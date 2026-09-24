@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
+        // Identify the checkout demo before processing payments.
         System.out.println("==================================================");
-        System.out.println("   E-COMMERCE CHECKOUT SYSTEM (POLYMORPHISM DEMO) ");
+        System.out.println("   E-COMMERCE CHECKOUT SYSTEM.");
         System.out.println("==================================================\n");
 
         // Runtime Polymorphism: Storing subclass instances in base class array
